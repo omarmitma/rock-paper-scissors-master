@@ -1,0 +1,685 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#1f3756, #141539);
+  color: #fff;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body button, body a {
+  -webkit-transition: .4s all;
+  transition: .4s all;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+body header .containerHeader {
+  width: 90%;
+  margin: 40px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: 2px solid #606e85;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+body header .containerHeader .containerPickeds .ulPickeds {
+  list-style: none;
+  line-height: 17px;
+}
+
+body header .containerHeader .containerPickeds .ulPickeds .picked {
+  font-size: 20px;
+}
+
+body header .containerHeader .containerScore {
+  background-color: #fff;
+  width: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  border-radius: 5px;
+}
+
+body header .containerHeader .containerScore div .textScore {
+  color: #2a46c0;
+  letter-spacing: 1px;
+}
+
+body header .containerHeader .containerScore div .score {
+  color: #3b4363;
+  font-size: 45px;
+  font-weight: 700;
+}
+
+body main .container {
+  width: 65%;
+  max-width: 350px;
+  margin: 80px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body main .container .containerHousePicker {
+  display: none;
+}
+
+body main .container .containerResult {
+  display: none;
+}
+
+body main .container .containerChoosePickers, body main .container .containerHousePickerActive {
+  position: relative;
+  width: 100%;
+}
+
+body main .container .containerChoosePickers .bgPentagon, body main .container .containerHousePickerActive .bgPentagon {
+  width: 100%;
+}
+
+body main .container .containerChoosePickers .pickedText, body main .container .containerHousePickerActive .pickedText {
+  display: none;
+  font-size: 18px;
+  text-align: center;
+  height: 60px;
+}
+
+body main .container .containerChoosePickers .containerBtn, body main .container .containerHousePickerActive .containerBtn {
+  position: absolute;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  outline: none;
+  border: none;
+  -webkit-transition: 0.6s all;
+  transition: 0.6s all;
+}
+
+body main .container .containerChoosePickers .containerBtn .btnPicker, body main .container .containerHousePickerActive .containerBtn .btnPicker {
+  background-color: #fff;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .container .containerChoosePickers .containerBtn .btnPicker img, body main .container .containerHousePickerActive .containerBtn .btnPicker img {
+  width: 50%;
+  margin: auto;
+}
+
+body main .container .containerChoosePickers .containerBtnScissor, body main .container .containerHousePickerActive .containerBtnScissor {
+  top: -40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: radial-gradient(#ec9e0e, #eca922);
+}
+
+body main .container .containerChoosePickers .containerBtnPaper, body main .container .containerHousePickerActive .containerBtnPaper {
+  top: 50px;
+  right: -40px;
+  background: radial-gradient(#4865f4, #5671f5);
+}
+
+body main .container .containerChoosePickers .containerBtnRock, body main .container .containerHousePickerActive .containerBtnRock {
+  bottom: -40px;
+  right: 10px;
+  background: radial-gradient(#dc2e4e, #dd405d);
+}
+
+body main .container .containerChoosePickers .containerBtnLizard, body main .container .containerHousePickerActive .containerBtnLizard {
+  bottom: -40px;
+  left: 10px;
+  background: radial-gradient(#834fe3, #8c5de5);
+}
+
+body main .container .containerChoosePickers .containerBtnSpock, body main .container .containerHousePickerActive .containerBtnSpock {
+  top: 50px;
+  left: -40px;
+  background: radial-gradient(#40b9ce, #52bed1);
+}
+
+body main .container .containerChoosePickerPlaying {
+  margin-right: 40px;
+}
+
+body main .container .containerChoosePickerPlaying .pickedText {
+  display: block;
+}
+
+body main .container .containerChoosePickerPlaying .bgPentagon {
+  display: none;
+}
+
+body main .container .containerChoosePickerPlaying .containerBtn {
+  display: none;
+}
+
+body main .container .containerChoosePickerPlaying .containerPicker {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 40px;
+  left: 0;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  cursor: auto;
+  width: 120px;
+  height: 120px;
+}
+
+body main .container .containerChoosePickerPlaying .containerPicker .btnPicker {
+  width: 90px;
+  height: 90px;
+}
+
+body main .container .containerResultActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .container .containerResultActive .content .result h1 {
+  font-size: 50px;
+}
+
+body main .container .containerResultActive .content .btnPlayAgain {
+  margin-top: 10px;
+}
+
+body main .container .containerResultActive .content .btnPlayAgain button {
+  background-color: #fff;
+  border-radius: 7px;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+}
+
+body main .container .containerResultActive .content .btnPlayAgain button:hover {
+  background-color: #f0f0f0;
+}
+
+body main .container .containerHousePickerActive {
+  display: block;
+  margin-left: 40px;
+}
+
+body main .container .containerHousePickerActive .housePickedText {
+  font-size: 18px;
+  text-align: center;
+  height: 60px;
+}
+
+body main .container .containerHousePickerActive .containerBtn {
+  top: 40px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  cursor: auto;
+  width: 120px;
+  height: 120px;
+  position: relative;
+}
+
+body main .container .containerHousePickerActive .containerBtn .btnPicker {
+  background-size: 55% 55%;
+  background-position-x: center;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  -webkit-animation-name: housePicked;
+          animation-name: housePicked;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-iteration-count: 3;
+          animation-iteration-count: 3;
+  width: 90px;
+  height: 90px;
+}
+
+body main .containerOpenRules {
+  position: relative;
+  margin: 40px 0;
+  text-align: center;
+}
+
+body main .containerOpenRules .btnRules {
+  background-color: transparent;
+  border: 1px solid #f0f0f0;
+  border-radius: 6px;
+  color: #f0f0f0;
+  padding: 8px 25px;
+  cursor: pointer;
+}
+
+body main .containerOpenRules .btnRules:hover {
+  border: 1px solid #c0c0c0;
+  color: #c0c0c0;
+}
+
+body main .containerActive {
+  display: -ms-grid;
+  display: grid;
+      grid-template-columns: repeat(2, 1fr);
+  width: 90%;
+  max-width: 90%;
+}
+
+body main .containerActive .containerChoosePickerPlaying {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 0;
+}
+
+body main .containerActive .containerChoosePickerPlaying .containerPicker {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+body main .containerActive .containerHousePickerActive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  margin: 0;
+}
+
+body main .containerActive .containerHousePickerActive .containerBtn {
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+body main .containerActive .containerResultActive {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  margin-top: 40px;
+}
+
+body main .containerActive .containerResultActive .content .result {
+  text-align: center;
+}
+
+body main .containerActive .containerResultActive .content .btnPlayAgain {
+  text-align: center;
+}
+
+body main .containerActive .containerResultActive .content .btnPlayAgain button {
+  width: 80%;
+}
+
+body footer .attribution {
+  font-size: 12px;
+  text-align: center;
+}
+
+body footer .attribution a {
+  color: #579da2;
+}
+
+body .modalRules {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation-name: modal;
+          animation-name: modal;
+  -webkit-animation-duration: 0.4s;
+          animation-duration: 0.4s;
+}
+
+body .modalRules .container {
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 7px;
+}
+
+body .modalRules .container .containerTitle {
+  color: #3b4363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .modalRules .container .containerTitle p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+body .modalRules .container .containerTitle button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+body .modalRules .container .containerRules {
+  margin-top: 20px;
+}
+
+@-webkit-keyframes modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes modal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes housePicked {
+  20% {
+    background-image: url("images/icon-scissor.svg");
+  }
+  40% {
+    background-image: url("images/icon-paper.svg");
+  }
+  60% {
+    background-image: url("images/icon-rock.svg");
+  }
+  80% {
+    background-image: url("images/icon-lizard.svg");
+  }
+  100% {
+    background-image: url("images/icon-spock.svg");
+  }
+}
+
+@keyframes housePicked {
+  20% {
+    background-image: url("images/icon-scissor.svg");
+  }
+  40% {
+    background-image: url("images/icon-paper.svg");
+  }
+  60% {
+    background-image: url("images/icon-rock.svg");
+  }
+  80% {
+    background-image: url("images/icon-lizard.svg");
+  }
+  100% {
+    background-image: url("images/icon-spock.svg");
+  }
+}
+
+@media (min-width: 768px) {
+  body header .containerHeader {
+    width: 600px;
+    margin: 40px auto;
+    padding: 15px;
+  }
+  body header .containerHeader .containerPickeds .ulPickeds {
+    line-height: 17px;
+  }
+  body header .containerHeader .containerPickeds .ulPickeds .picked {
+    font-size: 20px;
+  }
+  body header .containerHeader .containerScore {
+    width: 100px;
+    border-radius: 5px;
+  }
+  body header .containerHeader .containerScore div .score {
+    font-size: 45px;
+  }
+  body main .container {
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 80px auto;
+  }
+  body main .container .containerChoosePickers .pickedText, body main .container .containerHousePickerActive .pickedText {
+    font-size: 25px;
+  }
+  body main .container .containerChoosePickers .containerBtn, body main .container .containerHousePickerActive .containerBtn {
+    width: 110px;
+    height: 110px;
+  }
+  body main .container .containerChoosePickers .containerBtn .btnPicker, body main .container .containerHousePickerActive .containerBtn .btnPicker {
+    width: 80px;
+    height: 80px;
+  }
+  body main .container .containerChoosePickers .containerBtn .btnPicker img, body main .container .containerHousePickerActive .containerBtn .btnPicker img {
+    width: 50%;
+  }
+  body main .container .containerChoosePickers .containerBtnScissor, body main .container .containerHousePickerActive .containerBtnScissor {
+    top: -40px;
+    left: 0;
+    right: 0;
+  }
+  body main .container .containerChoosePickers .containerBtnPaper, body main .container .containerHousePickerActive .containerBtnPaper {
+    top: 60px;
+    right: -40px;
+  }
+  body main .container .containerChoosePickers .containerBtnRock, body main .container .containerHousePickerActive .containerBtnRock {
+    bottom: -40px;
+    right: 20px;
+  }
+  body main .container .containerChoosePickers .containerBtnLizard, body main .container .containerHousePickerActive .containerBtnLizard {
+    bottom: -40px;
+    left: 20px;
+  }
+  body main .container .containerChoosePickers .containerBtnSpock, body main .container .containerHousePickerActive .containerBtnSpock {
+    top: 60px;
+    left: -40px;
+  }
+  body main .container .containerChoosePickerPlaying {
+    margin-right: 40px;
+  }
+  body main .container .containerChoosePickerPlaying .containerPicker {
+    top: 40px;
+    left: 0;
+    cursor: auto;
+    width: 250px;
+    height: 250px;
+  }
+  body main .container .containerChoosePickerPlaying .containerPicker .btnPicker {
+    width: 190px;
+    height: 190px;
+  }
+  body main .container .containerResultActive .content .result h1 {
+    font-size: 50px;
+  }
+  body main .container .containerResultActive .content .btnPlayAgain {
+    margin-top: 10px;
+  }
+  body main .container .containerResultActive .content .btnPlayAgain button {
+    padding: 10px;
+    width: 100%;
+  }
+  body main .container .containerResultActive .content .btnPlayAgain button:hover {
+    background-color: #f0f0f0;
+  }
+  body main .container .containerHousePickerActive {
+    margin-left: 40px;
+  }
+  body main .container .containerHousePickerActive .housePickedText {
+    font-size: 25px;
+  }
+  body main .container .containerHousePickerActive .containerBtn {
+    top: 40px;
+    right: 0;
+    left: 0;
+    width: 250px;
+    height: 250px;
+  }
+  body main .container .containerHousePickerActive .containerBtn .btnPicker {
+    width: 190px;
+    height: 190px;
+  }
+  body main .containerOpenRules {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+  }
+  body main .containerOpenRules .btnRules {
+    padding: 8px 25px;
+  }
+  body main .containerOpenRules .btnRules:hover {
+    border: 1px solid #c0c0c0;
+  }
+  body main .containerActive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+    margin: 80px auto;
+  }
+  body main .containerActive .containerChoosePickerPlaying {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 40px;
+  }
+  body main .containerActive .containerChoosePickerPlaying .containerPicker {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  body main .containerActive .containerHousePickerActive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 40px;
+  }
+  body main .containerActive .containerHousePickerActive .containerBtn {
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+  }
+  body main .containerActive .containerResultActive {
+    margin-top: 0;
+  }
+  body main .containerActive .containerResultActive .content .result {
+    text-align: center;
+  }
+  body main .containerActive .containerResultActive .content .btnPlayAgain button {
+    width: 100%;
+  }
+  body .modalRules {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  body .modalRules .container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 7px;
+  }
+  body .modalRules .container .containerTitle p {
+    font-size: 20px;
+  }
+  body .modalRules .container .containerRules {
+    margin-top: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
