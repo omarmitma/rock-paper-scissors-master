@@ -310,7 +310,7 @@ body main .containerOpenRules .btnRules:hover {
 body main .containerActive {
   display: -ms-grid;
   display: grid;
-      grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   width: 90%;
   max-width: 90%;
 }
@@ -383,7 +383,7 @@ body footer .attribution a {
 }
 
 body .modalRules {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
@@ -406,9 +406,7 @@ body .modalRules {
 
 body .modalRules .container {
   margin: auto;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+  width: 90%;
   background-color: #fff;
   padding: 20px;
   border-radius: 7px;
@@ -438,6 +436,10 @@ body .modalRules .container .containerTitle button {
 
 body .modalRules .container .containerRules {
   margin-top: 20px;
+}
+
+body .modalRules .container .containerRules img {
+  width: 90%;
 }
 
 @-webkit-keyframes modal {
@@ -674,12 +676,18 @@ body .modalRules .container .containerRules {
     background-color: #fff;
     padding: 20px;
     border-radius: 7px;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
   }
   body .modalRules .container .containerTitle p {
     font-size: 20px;
   }
   body .modalRules .container .containerRules {
     margin-top: 20px;
+  }
+  body .modalRules .container .containerRules img {
+    width: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
